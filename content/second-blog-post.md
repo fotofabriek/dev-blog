@@ -5,7 +5,8 @@ tags:
 - Back-end
 - Programming
 - Creativity
-description: This is the description of the second blog post 
+description: This is the description of the second blog post
+isArchived: false
 ---
 
 # The second blog post tags

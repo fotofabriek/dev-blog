@@ -22,11 +22,14 @@ export default {
   name: "index.vue",
 
   async asyncData({ $content }) {
-    const posts = await $content()
-      .only(['title', 'tags', 'slug', 'image', 'description'])
+    const posts = await $content({ deep: true })
+      .only(['title', 'tags', 'slug', 'image', 'description', 'createdAt'])
       .sortBy('createdAt', 'desc')
+      .where({ isArchived: false })
       .limit(25)
       .fetch();
+
+    console.log(posts);
 
     return {
       posts

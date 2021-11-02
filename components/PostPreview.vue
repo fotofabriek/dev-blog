@@ -1,8 +1,8 @@
 <template>
-  <li class="transition-all duration-500 ease-in-out mr-5">
-    <a :href="`/blog/${post.slug}`" class="flex flex-col">
+  <li class="transition-all duration-500 ease-in-out mr-5 max-w-xs">
+    <a :href="`${post.path}`" class="flex flex-col">
       <nuxt-img
-        class="rounded-lg"
+        class="rounded-lg object-cover"
         :src="post.image"
         preset="preview"
         width="350"
